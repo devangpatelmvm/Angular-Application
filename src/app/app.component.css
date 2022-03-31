@@ -1,0 +1,23 @@
+/* .content-body{
+    min-height: 100%;
+    padding: 60px 1rem;
+    padding-left: 250px;
+    padding-right: 250px;
+    background-color: #16bca8;
+    display: block;
+    text-align: center;
+} */
+
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .fixed{
+   position: fixed;
+   top: 0;
+   z-index: 1;
+   width: 100%;
+  }
+  mat-sidenav-containe{
+    z-index: 1;
+  }

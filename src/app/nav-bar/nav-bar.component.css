@@ -1,0 +1,21 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .fixed{
+   position: fixed;
+   top: 0;
+   z-index: 1;
+   width: 100%;
+  }
+ 
+ .mat-list-item {
+      display: inline-block;
+      height: auto;
+      width: auto;
+ }
+
+ .active-list-item {
+  /* color: #b53fa5;  */
+  background-color: #ff006a;
+  /* font-weight: bold; */
+}

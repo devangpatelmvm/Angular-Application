@@ -1,0 +1,57 @@
+<!-- <p>dash-board works!</p> -->
+<div>
+  <app-nav-bar></app-nav-bar>
+</div>
+<div *ngIf="loggedin()" class="body">
+
+  
+  <!-- Time Code Start -->
+    <div style="text-align: center">
+      <span>Current Time : {{ time | date: "hh:mm:ss a" }}</span>
+    </div>
+
+  <!-- Graph Code start  -->
+
+  <div>
+    <h2 style="text-align: center">{{ chartType }} chart</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Select Chart</mat-label>
+      <mat-select [(ngModel)]="chartType">
+        <mat-option value="bar"> Bar </mat-option>
+        <mat-option value="pie"> Pie </mat-option>
+        <mat-option value="line">Line </mat-option>
+        <mat-option value="polarArea"> PolarArea </mat-option>
+        <mat-option value="radar"> Radar </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <div class="chart">
+        <!-- <div style="display: block; width: 80%; height: 50%; padding-left: 200px;"> -->
+        <div>
+          <canvas
+            baseChart
+            [data]="barChartData"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [type]="chartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"
+          >
+          </canvas>
+        </div>
+        <button
+          mat-button
+          mat-raised-button
+          color="primary"
+          (click)="randomize()"
+        >
+          Update
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Graph Code End -->
+
+
+
+</div>

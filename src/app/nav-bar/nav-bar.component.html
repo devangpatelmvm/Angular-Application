@@ -1,0 +1,42 @@
+<!-- <p>nav-bar works!</p> -->
+<ng-container>
+  <mat-toolbar color="primary" class="fixed">
+    <mat-toolbar-row>
+      <span>
+        Welcome {{ loggedinUserfirstName }} {{ loggedinUserlastName }},
+      </span>
+      &nbsp;&nbsp;&nbsp;
+      <span
+        ><div style="text-align: center">
+          <h2>{{ dayDisplay() }}</h2>
+        </div></span
+      >
+      <span class="example-spacer"> </span>
+  
+      <mat-list-item>
+        <a
+          mat-button
+          routerLinkActive="active-list-item"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/dash-board"
+        >
+          DashBoard
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a
+          mat-button
+          routerLinkActive="active-list-item"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/user-management"
+          >User Management
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a mat-button routerLinkActive="active-list-item" (click)="onLogout()">
+          Logout
+        </a>
+      </mat-list-item>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</ng-container>

@@ -1,0 +1,19 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+.body {
+  background-color: rgb(233, 229, 229);
+  margin-top: 66px;
+}
+
+.chart {
+  /* background-color: #dfe5e9; */
+  padding-left: 230px;
+  width: 70%;
+}
