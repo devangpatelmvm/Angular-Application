@@ -1,2 +1,3 @@
 # Angular-Application
-Hello, This is my first Project
+Hello, This is my first Project in Angular.
+
